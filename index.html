@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Gajraj+One&family=Karla:wght@300&family=Tilt+Prism&family=Ubuntu:wght@300&display=swap" rel="stylesheet">  
+
+        
+    <link rel="stylesheet" href="estilo.css">
+
+    <script src="script.js" defer></script>
+
+    <title>Calculadora de Gorjetas</title>
+
+    
+</head>
+
+<body>
+
+
+    <div id="container">
+
+        
+        <h1 class="title">Calculadora de Gorjetas</h1>
+    
+    <div>
+        <form class="tipsForm" id="tipsForm">
+
+            <label for="bill">
+
+                <p>Quanto ficou a conta</p>
+                
+
+            </label>
+            
+            <p>
+                R$ <input type="number" placeholder="100" name="bill" id="bill" class="forminput" required> <!-- Esse atributo (required) não permite submeter, somente depois de preenchido os campos-->
+
+            </p>
+
+            <label for="serviceQual">
+
+                <p>Como foi seu serviço</p>
+
+            </label>
+
+            <p>
+                <select name="serviceQual" id="serviceQual" class="formSelect" required>
+
+                    <option disabled selected value="0">Escolha uma opçao</option>  <!-- Atributo disabled selected: desabilita o 
+                                                                            ítem selecionado (não aparece o "Escolha uma opção" pra ser associado)-->
+
+                    <option value="0.3">30% - Incrível</option>
+                    <option value="0.2">20% - Bom</option>
+                    <option value="0.15">15% - Incrível</option>
+                    <option value="0.10">10% - Aceitável</option>
+                    <option value="0.05">05% - Péssimo</option>
+                    
+                </select>
+            </p>
+
+            <p>
+                <label for="people">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" name="people" id="people" class="forminput" required>pessoa(s)
+                </p>
+            </p>
+
+            <button type="submit" class="submit">Calcular</button> <br> 
+ 
+        </form>
+
+    </div>
+
+    <div id="totalTip">
+        
+        Gorjeta Total:
+        R$ <span id="tip">0.00</span>   
+         <span id="each">cada</span>
+    </div>
+</div>
+
+    
+</body>
+
+</html>
+
+
+
